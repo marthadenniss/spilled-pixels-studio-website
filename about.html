@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>About - Spilled Pixels Studio</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.csss"/>
+    </head>
+    <body>
+        <header>
+            <div class="logo">Spilled Pixels Studio</div>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="about">
+                <h2>About Us</h2>
+                <p><strong>Spilled Pixels Studio</strong> is a two person creative team made up of Chris and Martha.</p>
+                <p><strong>Martha</strong> is the visual wizard - designing sleek brands, building websites, and making pixels dance. With a background in graphic design and web design, she brings ides to life with clean code and creativity.</p>
+                <p><strong>Chris</strong> is the audio expert - cleaning up recordings, editing podcasts, and mixing sound with polish and precision. He ensures your voice and vision are heard loud and clear 
+                (with no weird background noise).</p>
+                <p>Together, we help creators, businesses, and entrepreneurs stand out with visuals and audio that feel intentional, bold, and fun.</p>
+                <p>We're based in Toledo, OH - but work with people everywhere.</p>
+            </section>
+        </main>
+        <footer>
+            <p>© 2025 Spilled Pixels Studio. All rights reserved</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://tiktok.com/@yourprofile" target="_blank" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                  </a>
+                  <a href="https://youtube.com/yourchannel" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                  <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="mailto:your.email@example.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+            </div>
+        </footer>
+        <script>
+            const toggle = document.getElementById('menu-toggle');
+            const nav = document.getElementById('nav');
+
+            toggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        </script>
+    </body>
+</html>
