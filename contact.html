@@ -4,13 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Spilled Pixels Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 
   <!-- Header -->
   <header>
-    <h1>Spilled Pixels Studio</h1>
-    <nav>
+    <a href="/" class="logo">
+        <img src="path/to/your-logo-small.png" alt="Your Logo" />
+      </a>
+    <div class="logo">Spilled Pixels Studio</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <nav id="nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -23,7 +29,7 @@
 
   <!-- Contact Info -->
   <main>
-    <section id="contact-info">
+    <section id="contact-info" class="'content-block">
       <h2>Contact Us</h2>
       <p>Let’s connect! Use the form below or email us directly depending on your needs:</p>
       <ul>
@@ -34,7 +40,7 @@
     </section>
 
     <!-- Contact Form -->
-    <section id="contact-form">
+    <section id="contact-form" class="content-block">
       <h3>Send Us a Message</h3>
       <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
         <label for="name">Your Name:</label><br />
@@ -46,22 +52,39 @@
         <label for="message">Your Message:</label><br />
         <textarea id="message" name="message" rows="5" required></textarea><br /><br />
 
-        <button type="submit">Send Message</button>
+        <button type="submit" class="cta-button">Send Message</button>
       </form>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Spilled Pixels Studio. All rights reserved.</p>
-    <p>
-      <a href="mailto:helloworld@spilledpixels.com">Email</a> |
-      <a href="https://instagram.com/spilledpixelsstudio" target="_blank">Instagram</a> |
-      <a href="https://tiktok.com/@spilledpixelsstudio" target="_blank">TikTok</a> |
-      <a href="https://youtube.com/@spilledpixelsstudio" target="_blank">YouTube</a> |
-      <a href="https://facebook.com/spilledpixelsstudio" target="_blank">Facebook</a>
-    </p>
+    <p>© 2025 Spilled Pixels Studio. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://tiktok.com/@yourprofile" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://youtube.com/yourchannel" target="_blank" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="mailto:your.email@example.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
   </footer>
+<script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
 
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
