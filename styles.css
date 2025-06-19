@@ -1,0 +1,148 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Shirkhand', cursive;
+    color: #f05133;
+    letter-spacing: 1.5px;
+}
+
+/* Logo - black & white image invert for dark bg */
+.logo, .logo img {
+    max-height: 60px;
+    width: auto;
+    display: block;
+    cursor: default;
+    user-select: none;
+}
+
+.logo img {
+    filter: brightness(0) invert(1);
+}
+
+/* Header Section */
+header {
+    background-color: #1f1f1f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Navigation */
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a.active::after,
+nav ul li a:hover::after {
+    content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #f05133;
+  border-radius: 3px;
+}
+
+/* Hamburger menu toggle */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #f05133
+}
+
+/* Main content */
+main {
+    flex: 1;
+    padding: 3rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.cta-button {
+    background-color: #f05133;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(240,81,51,0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d43e1e;
+    box-shadow: 0 6px 12px rgba(212,62,30,0.7);
+}
+
+/* Portfolio and audio grids */
+.portfolio-grid,
+.audio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.portfolio-item,
+.audio-item {
+    background-color: #222;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(240, 81, 51, 0.3);
+    text-align: center;
+    color: #eee;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    width: 180px;
+}
+
+.portfolio-item strong,
+.audio-item p strong {
+    color: #f05133;
+    display: block;
+    margin-bottom: 0.6rem;
+}
+

@@ -4,6 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Portfolio - Spilled Pixels Studio</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.csss"/>
     </head>
     <body>
         <header>
@@ -19,10 +21,142 @@
             </nav>
         </header>
         <main>
-            <section id="portfolio">
-                <h2>Our Work</h2>
-                
-            </section>
+          <section id="portfolio">
+            <h2>Our Work</h2>
+            <p>Check out a few samples of our creative work below. More available upon request.</p>
+      
+            <h3>Graphic Design</h3>
+            <div class="portfolio-grid">
+              <div class="portfolio-item">
+                <strong>Flyers & Print</strong><br />
+                <a href="#"><img src="https://via.placeholder.com/180x120?text=Flyer+1" alt="Flyer example" /></a>
+                <a href="#"><img src="https://via.placeholder.com/180x120?text=Flyer+2" alt="Flyer example" /></a>
+              </div>
+      
+              <div class="portfolio-item">
+                <strong>Logos & Branding</strong><br />
+                <a href="#"><img src="https://via.placeholder.com/180x120?text=Logo+1" alt="Logo sample" /></a>
+              </div>
+      
+              <div class="portfolio-item">
+                <strong>Brochures</strong><br />
+                <a href="#"><img src="https://via.placeholder.com/180x120?text=Brochure" alt="Brochure design" /></a>
+              </div>
+            </div>
+      
+            <h3>Web Design</h3>
+<p>Here are examples of websites we've built or improved to support small business success.</p>
+
+<div class="portfolio-grid">
+  <div class="portfolio-item">
+    <strong>Personal Portfolio Website</strong><br />
+    <a href="https://marthamerickelportfolio.web.app/" target="_blank">
+      <img src="https://via.placeholder.com/180x120?text=Portfolio+Site" alt="Martha Merickel Portfolio" />
+    </a>
+    <p>A personal portfolio site showcasing design, web, and branding work.</p>
+  </div>
+
+  <div class="portfolio-item">
+    <strong>Brodie-Wargo Vision & Sensory Therapy</strong><br />
+    <a href="https://www.brodiewargo.com" target="_blank">
+      <img src="https://via.placeholder.com/180x120?text=Updated+Site" alt="Brodie-Wargo site" />
+    </a>
+    <p>Performed content cleanup, navigation fixes, and layout improvements.</p>
+  </div>
+</div>
+      
+            <h3>Social Media & Content</h3>
+            <div class="portfolio-grid">
+              <div class="portfolio-item">
+                <strong>Instagram Reels & Graphics</strong><br />
+                <a href="#"><img src="https://via.placeholder.com/180x120?text=Reel+Thumbnail" alt="Reel thumbnail" /></a>
+              </div>
+            </div>
+      
+            <h3>Photography & Promo Videos</h3>
+            <div class="portfolio-grid">
+              <div class="portfolio-item">
+                <strong>Brand Photography</strong><br />
+                <a href="#"><img src="https://via.placeholder.com/180x120?text=Brand+Shoot" alt="Photography sample" /></a>
+              </div>
+      
+              <div class="portfolio-item">
+                <strong>Product Photos</strong><br />
+                <a href="#"><img src="https://via.placeholder.com/180x120?text=Product+Shot" alt="Product photo" /></a>
+              </div>
+      
+              <div class="portfolio-item">
+                <strong>Event Coverage</strong><br />
+                <a href="#"><img src="https://via.placeholder.com/180x120?text=Event+Photo" alt="Event photo" /></a>
+              </div>
+      
+              <div class="portfolio-item">
+                <strong>Promo Videos</strong><br />
+                <a href="#"><img src="https://via.placeholder.com/180x120?text=Promo+Video" alt="Video thumbnail" /></a>
+              </div>
+            </div>
+          </section>
+          <section id="audio">
+            <h2>🎧 Audio Portfolio</h2>
+            <p>Chris produces original music for commercial, podcast, and creative use. Below are a few sample tracks.</p>
+          
+            <h3>🎼 Original Tracks</h3>
+            <div class="audio-grid">
+              <div class="audio-item">
+                <p><strong>Track 1 – "Sky Drifter"</strong></p>
+                <audio controls>
+                  <source src="audio/sky-drifter.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+          
+              <div class="audio-item">
+                <p><strong>Track 2 – "Neon Bloom"</strong></p>
+                <audio controls>
+                  <source src="audio/neon-bloom.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+          
+              <div class="audio-item">
+                <p><strong>Track 3 – "Lo-Fi Loop"</strong></p>
+                <audio controls>
+                  <source src="audio/lofi-loop.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+          </section>
+          
+      
         </main>
+        <footer>
+          <p>© 2025 Spilled Pixels Studio. All rights reserved.</p>
+          <div class="social-icons">
+            <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@yourprofile" target="_blank" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://youtube.com/yourchannel" target="_blank" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="mailto:your.email@example.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </footer>
+  <script>
+      const toggle = document.getElementById('menu-toggle');
+      const nav = document.getElementById('nav');
+  
+      toggle.addEventListener('click', () => {
+          nav.classList.toggle('active');
+      });
+  </script>      
     </body>
 </html>
