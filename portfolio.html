@@ -10,7 +10,7 @@
 <body>
   <header>
     <a href="/" class="logo">
-      <img src="path/to/your-logo-small.png" alt="Your Logo" />
+      <img src="img/portfolio-thumbnail.png" alt="Your Logo" />
     </a>
     <div class="logo">Spilled Pixels Studio</div>
     <div class="menu-toggle" id="menu-toggle">&#9776;</div>
@@ -34,15 +34,21 @@
       <div class="portfolio-grid">
         <div class="portfolio-item">
           <strong>Flyers & Print</strong><br />
-          <a href="#"><img src="https://via.placeholder.com/180x120?text=Flyer+1" alt="Flyer example" /></a>
-          <a href="#"><img src="https://via.placeholder.com/180x120?text=Flyer+2" alt="Flyer example" /></a>
+          <div class="flyer-grid">
+            <img src="img/Art-show-raffle-flyer_01.jpg" alt="Art Show Raffle Flyer" class="zoomable" />
+            <img src="img/runner-nation-celebration-final_01.jpg" alt="Runner Nation Celebration Flyer" class="zoomable" />
+          </div>
         </div>
 
         <div class="portfolio-item">
           <strong>Logos & Branding</strong><br />
-          <a href="#"><img src="https://via.placeholder.com/180x120?text=Logo+1" alt="Logo sample" /></a>
+          <div class="flyer-grid">
+          <a href="https://www.kluarticles.com/"><img src="img/klu-logo-green.png" alt="Logo sample" /></a>
+        
+        
+        <a href="https://www.facebook.com/artcatgalleries/"><img src="img/art-cat-studios.jpg" alt="Logo sample" /></a>
         </div>
-
+      </div>
         <div class="portfolio-item">
           <strong>Brochures</strong><br />
           <a href="#"><img src="https://via.placeholder.com/180x120?text=Brochure" alt="Brochure design" /></a>
@@ -55,15 +61,15 @@
         <div class="portfolio-item">
           <strong>Personal Portfolio Website</strong><br />
           <a href="https://marthamerickelportfolio.web.app/" target="_blank">
-            <img src="https://via.placeholder.com/180x120?text=Portfolio+Site" alt="Martha Merickel Portfolio" />
+            <img src="img/portfolio-thumbnail.png" alt="Martha Merickel Portfolio" />
           </a>
           <p>A personal portfolio site showcasing design, web, and branding work.</p>
         </div>
 
         <div class="portfolio-item">
           <strong>Brodie-Wargo Vision & Sensory Therapy</strong><br />
-          <a href="https://www.brodiewargo.com" target="_blank">
-            <img src="https://via.placeholder.com/180x120?text=Updated+Site" alt="Brodie-Wargo site" />
+          <a href="https://www.brodiewargotherapycenter.com/" target="_blank">
+            <img src="img/brodie-wargo-thumbnail.png" alt="Brodie-Wargo site" />
           </a>
           <p>Performed content cleanup, navigation fixes, and layout improvements.</p>
         </div>
@@ -108,25 +114,25 @@
       <h3>Original Tracks</h3>
       <div class="audio-grid">
         <div class="audio-item">
-          <p><strong>Track 1 – "Sky Drifter"</strong></p>
+          <p><strong>Track 1 – "Funky 90's Sitcom Outro"</strong></p>
           <audio controls>
-            <source src="audio/sky-drifter.mp3" type="audio/mpeg" />
+            <source src="audio/Funky90sSitcomOutro.wav" type="audio/wav" />
             Your browser does not support the audio element.
           </audio>
         </div>
 
         <div class="audio-item">
-          <p><strong>Track 2 – "Neon Bloom"</strong></p>
+          <p><strong>Track 2 – "Rock Synth"</strong></p>
           <audio controls>
-            <source src="audio/neon-bloom.mp3" type="audio/mpeg" />
+            <source src="audio/RockSynth.wav" type="audio/wav" />
             Your browser does not support the audio element.
           </audio>
         </div>
 
         <div class="audio-item">
-          <p><strong>Track 3 – "Lo-Fi Loop"</strong></p>
+          <p><strong>Track 3 – "Something Fun"</strong></p>
           <audio controls>
-            <source src="audio/lofi-loop.mp3" type="audio/mpeg" />
+            <source src="audio/idontevenknow.wav" type="audio/wav" />
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -155,11 +161,41 @@
     </div>
   </footer>
 
+  <!-- Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" id="closeModal">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Zoomed flyer" />
+  </div>
+
   <script>
     const toggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('nav');
     toggle.addEventListener('click', () => {
       nav.classList.toggle('active');
+    });
+
+    // Zoom Modal Script
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+    const zoomables = document.querySelectorAll('.zoomable');
+
+    zoomables.forEach(img => {
+      img.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
     });
   </script>
 </body>
