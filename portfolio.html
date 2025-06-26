@@ -49,9 +49,25 @@
         <a href="https://www.facebook.com/artcatgalleries/"><img src="img/art-cat-studios.jpg" alt="Logo sample" /></a>
         </div>
       </div>
-        <div class="portfolio-item">
-          <strong>Brochures</strong><br />
-          <a href="#"><img src="https://via.placeholder.com/180x120?text=Brochure" alt="Brochure design" /></a>
+      <div class="portfolio-item">
+        <strong>Brochures</strong><br />
+        <div class="brochure-wrapper">
+          <div class="brochure" id="trifold">
+            <div class="panel">
+              <div class="face front left"></div>
+              <div class="face back left"></div>
+            </div>
+            <div class="panel">
+              <div class="face front center"></div>
+              <div class="face back center"></div>
+            </div>
+            <div class="panel">
+              <div class="face front right"></div>
+              <div class="face back right"></div>
+            </div>
+          </div>
+          <button id="fold-toggle">Fold / Unfold</button>
+          <button id="flip-toggle">Flip Front/Back</button>
         </div>
       </div>
 
@@ -102,7 +118,7 @@
 
         <div class="portfolio-item">
           <strong>Promo Videos</strong><br />
-          <a href="#"><img src="https://via.placeholder.com/180x120?text=Promo+Video" alt="Video thumbnail" /></a>
+          <a href="https://youtu.be/McBfNU6C9Pw"><img src="https://youtu.be/McBfNU6C9Pw" alt="Video thumbnail" /></a>
         </div>
       </div>
     </section>
@@ -197,6 +213,19 @@
         modal.style.display = 'none';
       }
     });
+    // Brochure animation
+const brochure = document.getElementById('trifold');
+const foldBtn = document.getElementById('fold-toggle');
+const flipBtn = document.getElementById('flip-toggle');
+
+foldBtn.addEventListener('click', () => {
+  brochure.classList.toggle('folded');
+});
+
+flipBtn.addEventListener('click', () => {
+  brochure.classList.toggle('flipped');
+});
+
   </script>
 </body>
 </html>

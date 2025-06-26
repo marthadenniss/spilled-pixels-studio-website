@@ -200,7 +200,9 @@ main {
 
 .portfolio-grid,
 .audio-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
@@ -213,6 +215,10 @@ main {
   text-align: center;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
+  flex: 1 1 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
 }
 
 .portfolio-item:hover,
@@ -258,6 +264,66 @@ audio {
   background-color: #111;
   border-radius: 5px;
   box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1);
+}
+.brochure-wrapper {
+  perspective: 1500px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.brochure {
+  display: flex;
+  width: 540px;
+  height: 360px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.panel {
+  position: relative;
+  width: 180px;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-size: 540px 360px;
+  background-repeat: no-repeat;
+}
+
+/* Front panels – adjust these with your actual image paths */
+.front.left    { background-image: url('img/brochure-front.jpg'); background-position: left; }
+.front.center  { background-image: url('img/brochure-front.jpg'); background-position: center; }
+.front.right   { background-image: url('img/brochure-front.jpg'); background-position: right; }
+
+/* Back panels – adjust these with your actual image paths */
+.back {
+  transform: rotateY(180deg);
+}
+.back.left    { background-image: url('img/brochure-back.jpg'); background-position: right; }
+.back.center  { background-image: url('img/brochure-back.jpg'); background-position: center; }
+.back.right   { background-image: url('img/brochure-back.jpg'); background-position: left; }
+
+/* Folding animation */
+.brochure.folded .panel:nth-child(1) { transform: rotateY(60deg); transform-origin: right; z-index: 2; }
+.brochure.folded .panel:nth-child(3) { transform: rotateY(-60deg); transform-origin: left; z-index: 2; }
+
+/* Flip to back side */
+.brochure.flipped .panel {
+  transform: rotateY(180deg);
+}
+
+#fold-toggle, #flip-toggle {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 /* Modal for Zoom */
