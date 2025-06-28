@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio - Spilled Pixels Studio</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <header>
@@ -28,30 +31,46 @@
   <main>
     <section id="portfolio">
       <h2>Our Work</h2>
-      <p>Check out a few samples of our creative work below. More available upon request.</p>
+      <p>
+        Check out a few samples of our creative work below. More available upon
+        request.
+      </p>
 
-      <h3>Graphic Design</h3>
-      <div class="portfolio-grid">
+      <h3>Graphic Design & Logos</h3>
+      <div class="graphics-logo-row">
         <div class="portfolio-item">
           <strong>Flyers & Print</strong><br />
           <div class="flyer-grid">
-            <img src="img/Art-show-raffle-flyer_01.jpg" alt="Art Show Raffle Flyer" class="zoomable" />
-            <img src="img/runner-nation-celebration-final_01.jpg" alt="Runner Nation Celebration Flyer" class="zoomable" />
+            <img
+              src="img/Art-show-raffle-flyer_01.jpg"
+              alt="Art Show Raffle Flyer"
+              class="zoomable"
+            />
+            <img
+              src="img/runner-nation-celebration-final_01.jpg"
+              alt="Runner Nation Celebration Flyer"
+              class="zoomable"
+            />
           </div>
         </div>
 
         <div class="portfolio-item">
           <strong>Logos & Branding</strong><br />
           <div class="flyer-grid">
-          <a href="https://www.kluarticles.com/"><img src="img/klu-logo-green.png" alt="Logo sample" /></a>
-        
-        
-        <a href="https://www.facebook.com/artcatgalleries/"><img src="img/art-cat-studios.jpg" alt="Logo sample" /></a>
+            <a href="https://www.kluarticles.com/"
+              ><img src="img/klu-logo-green.png" alt="Logo sample" />
+            </a>
+
+            <a href="https://www.facebook.com/artcatgalleries/"
+              ><img src="img/art-cat-studios.jpg" alt="Logo sample" />
+            </a>
+          </div>
         </div>
       </div>
-      <div class="portfolio-item">
-        <strong>Brochures</strong><br />
-        <div class="brochure-wrapper">
+
+      <h3>Brochures</h3>
+      <div class="brochure-row">
+        <div class="portfolio-item brochure-wrapper">
           <div class="brochure" id="trifold">
             <div class="panel">
               <div class="face front left"></div>
@@ -72,14 +91,18 @@
       </div>
 
       <h3>Web Design</h3>
-      <p>Here are examples of websites we've built or improved to support small business success.</p>
-      <div class="portfolio-grid">
+      <div class="websites-row">
         <div class="portfolio-item">
-          <strong>Personal Portfolio Website</strong><br>
+          <strong>Personal Portfolio Website</strong><br />
           <a href="https://marthamerickelportfolio.web.app/" target="_blank">
-            <img src="img/portfolio-thumbnail.png" alt="Martha Merickel Portfolio" />
+            <img
+              src="img/portfolio-thumbnail.png"
+              alt="Martha Merickel Portfolio"
+            />
           </a>
-          <p>A personal portfolio site showcasing design, web, and branding work.</p>
+          <p>
+            A personal portfolio site showcasing design, web, and branding work.
+          </p>
         </div>
 
         <div class="portfolio-item">
@@ -96,33 +119,18 @@
         <div class="portfolio-item">
           <strong>Instagram Reels & Graphics</strong><br />
           <video controls autoplay muted loop class="custom-video">
-            <source src="video/bw-reel-1.mp4" type="video/mp4">
+            <source src="video/bw-reel-1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
       </div>
 
       <h3>Promo Videos</h3>
-     <!-- <div class="portfolio-grid">
+      <div class="portfolio-grid">
         <div class="portfolio-item">
-          <strong>Brand Photography</strong><br />
-          <a href="#"><img src="https://via.placeholder.com/180x120?text=Brand+Shoot" alt="Photography sample" /></a>
-        </div>
-
-        <div class="portfolio-item">
-          <strong>Product Photos</strong><br />
-          <a href="#"><img src="https://via.placeholder.com/180x120?text=Product+Shot" alt="Product photo" /></a>
-        </div>
-
-        <div class="portfolio-item">
-          <strong>Event Coverage</strong><br />
-          <a href="#"><img src="https://via.placeholder.com/180x120?text=Event+Photo" alt="Event photo" /></a>
-        </div>
-
-        <div class="portfolio-item">-->
           <strong>Promo Videos</strong><br />
           <video controls autoplay muted loop class="custom-video">
-            <source src="video/facebook-video-with-music.mp4" type="video/mp4">
+            <source src="video/facebook-video-with-music.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -131,7 +139,10 @@
 
     <section id="audio">
       <h2>Audio Portfolio</h2>
-      <p>Original music for commercial and creative use. Below are a few sample tracks.</p>
+      <p>
+        Original music for commercial and creative use. Below are a few sample
+        tracks.
+      </p>
 
       <h3>Original Tracks</h3>
       <div class="audio-grid">
@@ -163,7 +174,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Spilled Pixels Studio. All rights reserved.</p>
+    <p>© 2025 Spilled Pixels Studio. All rights reserved.</p>
     <div class="social-icons">
       <a href="https://instagram.com/spilledpixelsstudio" target="_blank" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
@@ -190,48 +201,48 @@
   </div>
 
   <script>
-    const toggle = document.getElementById('menu-toggle');
-    const nav = document.getElementById('nav');
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
     });
 
     // Zoom Modal Script
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-    const closeModal = document.getElementById('closeModal');
-    const zoomables = document.querySelectorAll('.zoomable');
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeModal = document.getElementById("closeModal");
+    const zoomables = document.querySelectorAll(".zoomable");
 
-    zoomables.forEach(img => {
-      img.addEventListener('click', () => {
-        modal.style.display = 'flex';
+    zoomables.forEach((img) => {
+      img.addEventListener("click", () => {
+        modal.style.display = "flex";
         modalImg.src = img.src;
         modalImg.alt = img.alt;
       });
     });
 
-    closeModal.addEventListener('click', () => {
-      modal.style.display = 'none';
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
     });
 
-    modal.addEventListener('click', (e) => {
+    modal.addEventListener("click", (e) => {
       if (e.target === modal) {
-        modal.style.display = 'none';
+        modal.style.display = "none";
       }
     });
+
     // Brochure animation
-const brochure = document.getElementById('trifold');
-const foldBtn = document.getElementById('fold-toggle');
-const flipBtn = document.getElementById('flip-toggle');
+    const brochure = document.getElementById("trifold");
+    const foldBtn = document.getElementById("fold-toggle");
+    const flipBtn = document.getElementById("flip-toggle");
 
-foldBtn.addEventListener('click', () => {
-  brochure.classList.toggle('folded');
-});
+    foldBtn.addEventListener("click", () => {
+      brochure.classList.toggle("folded");
+    });
 
-flipBtn.addEventListener('click', () => {
-  brochure.classList.toggle('flipped');
-});
-
+    flipBtn.addEventListener("click", () => {
+      brochure.classList.toggle("flipped");
+    });
   </script>
 </body>
 </html>

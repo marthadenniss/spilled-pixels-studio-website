@@ -58,27 +58,27 @@ main {
   font-family: 'Roboto', sans-serif; 
   text-shadow: none;
 }
-  .cta-button {
-    background-color: #444;
-    color: white;
-    padding: 1rem 2.5rem;
-    border-radius: 40px;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 1.25rem;
-    box-shadow: 0 6px 12px rgba(68, 68, 68, 0.7);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #131314;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(44, 122, 153, 0.4);
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #666;
-    box-shadow: 0 8px 20px rgba(102,102,102,0.9);
-    cursor: pointer;
+  background-color: #1b4f5c;
+  box-shadow: 0 6px 12px rgba(27, 79, 92, 0.6);
 }
+
 
 body > * {
   position: relative;
@@ -197,17 +197,18 @@ main {
   padding-bottom: 1rem;
 }
 
+/* Base grid styles for portfolio and audio */
 .portfolio-grid,
 .audio-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
+/* Portfolio and audio items */
 .portfolio-item,
-.audio-item{
+.audio-item {
   background-color: #222;
   padding: 1rem;
   border-radius: 10px;
@@ -239,11 +240,12 @@ main {
   height: auto;
   object-fit: contain;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   aspect-ratio: 4 / 3;
 }
 
+/* Flyer grid inside portfolio */
 .flyer-grid {
   display: flex;
   gap: 1.5rem;
@@ -264,6 +266,8 @@ audio {
   border-radius: 5px;
   box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1);
 }
+
+/* Brochure styles */
 .brochure-wrapper {
   perspective: 1500px;
   text-align: center;
@@ -297,28 +301,55 @@ audio {
 }
 
 /* Front panels – adjust these with your actual image paths */
-.front.left    { background-image: url('img/brochure-front.jpg'); background-position: left; }
-.front.center  { background-image: url('img/brochure-front.jpg'); background-position: center; }
-.front.right   { background-image: url('img/brochure-front.jpg'); background-position: right; }
+.front.left {
+  background-image: url('img/brochure-front.jpg');
+  background-position: left;
+}
+.front.center {
+  background-image: url('img/brochure-front.jpg');
+  background-position: center;
+}
+.front.right {
+  background-image: url('img/brochure-front.jpg');
+  background-position: right;
+}
 
 /* Back panels – adjust these with your actual image paths */
 .back {
   transform: rotateY(180deg);
 }
-.back.left    { background-image: url('img/brochure-back.jpg'); background-position: right; }
-.back.center  { background-image: url('img/brochure-back.jpg'); background-position: center; }
-.back.right   { background-image: url('img/brochure-back.jpg'); background-position: left; }
+.back.left {
+  background-image: url('img/brochure-back.jpg');
+  background-position: right;
+}
+.back.center {
+  background-image: url('img/brochure-back.jpg');
+  background-position: center;
+}
+.back.right {
+  background-image: url('img/brochure-back.jpg');
+  background-position: left;
+}
 
 /* Folding animation */
-.brochure.folded .panel:nth-child(1) { transform: rotateY(60deg); transform-origin: right; z-index: 2; }
-.brochure.folded .panel:nth-child(3) { transform: rotateY(-60deg); transform-origin: left; z-index: 2; }
+.brochure.folded .panel:nth-child(1) {
+  transform: rotateY(60deg);
+  transform-origin: right;
+  z-index: 2;
+}
+.brochure.folded .panel:nth-child(3) {
+  transform: rotateY(-60deg);
+  transform-origin: left;
+  z-index: 2;
+}
 
 /* Flip to back side */
 .brochure.flipped .panel {
   transform: rotateY(180deg);
 }
 
-#fold-toggle, #flip-toggle {
+#fold-toggle,
+#flip-toggle {
   margin: 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -335,7 +366,7 @@ audio {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.85);
+  background-color: rgba(0, 0, 0, 0.85);
   justify-content: center;
   align-items: center;
 }
@@ -344,7 +375,7 @@ audio {
   max-width: 90%;
   max-height: 90%;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 .modal .close {
@@ -358,6 +389,41 @@ audio {
   z-index: 10000;
 }
 
+
+
+/* Graphics & Logos side by side */
+.graphics-logo-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.graphics-logo-row .portfolio-item {
+  flex: 1 1 45%;
+  max-width: 45%;
+}
+
+/* Brochure full width */
+.brochure-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.brochure-row .portfolio-item {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+/* Websites side by side */
+.websites-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.websites-row .portfolio-item {
+  flex: 1 
+}
 /* Footer */
 footer {
   background-color: #1f1f1f;
@@ -419,6 +485,7 @@ footer {
     transform: scale(1.5);
   }
 }
+/* Services Section Wrapper */
 #services {
   max-width: 900px;
   margin: 3rem auto;
@@ -432,6 +499,8 @@ footer {
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
+  position: relative;
+  z-index: 0;
 }
 
 /* Individual Service Box */
@@ -442,13 +511,15 @@ footer {
   padding: 1.5rem 2rem;
   margin-bottom: 1.8rem;
   box-shadow: 0 4px 8px rgba(168, 166, 166, 0.3);
-  transition: box-shadow 0.3s ease, padding 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
   width: 100%;
   max-width: 400px;
   flex: 1 1 300px;
   cursor: pointer;
   overflow: hidden;
   max-height: 260px;
+  transform-origin: center;
+  z-index: 1;
 }
 
 /* Hover Style */
@@ -459,12 +530,15 @@ footer {
 
 /* Expanded Style */
 .services-block.expanded {
-  box-shadow: 0 12px 24px rgba(168, 166, 166, 0.6);
+  transform: scale(2);
+  transform-origin: center;
+  z-index: 100;
   background-color: #2a2a2a;
   border: 1px solid #636260;
+  box-shadow: 0 12px 24px rgba(168, 166, 166, 0.6);
   padding-bottom: 3rem;
-  max-height: none; 
-  z-index: 1;
+  max-height: none;
+  position: relative;
 }
 
 /* Service Title */
@@ -481,6 +555,7 @@ footer {
   color: #ccc;
   font-size: 1.1rem;
   opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 /* Fade in list on expand */
@@ -491,25 +566,28 @@ footer {
 /* Close Button */
 .close-btn {
   background-color: #444;
-    color: white;
-    padding: 1rem 2.5rem;
-    border-radius: 40px;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 1.25rem;
-    box-shadow: 0 6px 12px rgba(68, 68, 68, 0.7);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    position: absolute;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.25rem;
+  box-shadow: 0 6px 12px rgba(68, 68, 68, 0.7);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 101;
   cursor: pointer;
+  display: none;
 }
 
+/* Show Close Button when Expanded */
 .services-block.expanded .close-btn {
-    transform: scale(2);
-    box-shadow: 0 10px 20px rgba(108, 122, 174, 0.6);
-    z-index: 10;
-    position: relative;
-  }
-
+  display: block;
+  transform: scale(1);
+  box-shadow: 0 10px 20px rgba(108, 122, 174, 0.6);
+}
 
 /* Notes */
 .services-note {
@@ -542,6 +620,7 @@ footer {
   font-style: italic;
   margin-bottom: 2rem;
 }
+
 .custom-video {
   width: 100%;
   max-width: 800px;
