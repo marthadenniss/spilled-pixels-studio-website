@@ -504,7 +504,11 @@ footer {
 }
 
 .services-block.expanded .close-btn {
-  display: block;
+    transform: scale(2);
+    box-shadow: 0 10px 20px rgba(108, 122, 174, 0.6);
+    z-index: 10;
+    position: relative;
+  }
 }
 
 /* Notes */
